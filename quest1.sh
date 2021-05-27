@@ -19,8 +19,6 @@ function maior {
 	echo $numero
 
 }
-read -p "Informe dois números: " num1 num2
-maior $num1 $num2
 
 function menor {
 
@@ -42,4 +40,10 @@ function menor {
 }
 
 read -p "Informe dois números: " num1 num2
-menor $num1 $num2
+
+num_maior=$( maior $num1 $num2 )
+
+num_menor=$(menor  $num1 $num2 )
+
+echo "O maior número informado é:  $num_maior"
+echo "O menor número informado é: $num_menor"
